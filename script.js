@@ -38,23 +38,45 @@ console.log(data[1].name + " ada di kelas " + data[1].class + " dia mengikuti " 
 
 //Soal no 3
 let todos = [
-  { id: 1, todo: "belajar coding" },
-  { id: 2, todo: "nanti tidur" },
+  { id: 1, todo: "Coding" },
+  { id: 2, todo: "Istirahat" },
 ];
 
 function printAll() {
-  for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i]);
-  }
+  todos.forEach((element) => {
+    console.log(element);
+  });
 }
-
 printAll();
 
-function printByID(id) {
-  return todos[id - 1].todo;
+function add(newTodo) {
+  todos.push({
+    id: todos.length + 1,
+    todo: newTodo,
+  });
+  return todos;
 }
+console.log(add("Makan"));
 
-console.log("Print by ID:", printByID(1));
+function deleteByID(id) {
+  for (let i in todos) {
+    if (todos[i].id == id) {
+      return todos.splice(i, 1);
+    }
+  }
+}
+console.log("Delete:", deleteByID(2));
+
+function updateByID(id, newTodo) {
+  for (let i in todos) {
+    if (todos[i].id == id) {
+      todos[i].todo = newTodo;
+      break;
+    }
+  }
+  return todos;
+}
+console.log("UpdateByID:", updateByID(3, "Belajar CRUD"));
 
 // Soal no 4
 let buah = [
@@ -131,7 +153,6 @@ for (let i = 0; i <= buah.length; i++) {
                     <p class="card-text fs-6 fw-light" alt="Loading...">Warna: ${buah[i].warna}</p>
                     <p class="card-text fs-6 fw-light" alt="Loading...">Nama Latin: ${buah[i].namaLatin}</p>
                     <p class="card-text fs-6 fw-light" alt="Loading...">Tipe Biji: ${buah[i].tipeBiji}</p>
-                    
                   </div>
             </div>
           </div>
