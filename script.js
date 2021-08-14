@@ -59,56 +59,56 @@ console.log("Print by ID:", printByID(1));
 // Soal no 4
 let buah = [
   {
-    gambar: "img/gambar1.png",
+    images: "img/gambar1.png",
     nama: "Apple",
     warna: "Red",
     namaLatin: "Malus Sylvestris",
     tipeBiji: "Single Seed",
   },
   {
-    gambar: "img/gambar2.png",
+    images: "img/gambar2.png",
     nama: "Banana",
     warna: "Yellow",
     namaLatin: "Musa Paradisiaca",
     tipeBiji: "Double Seed",
   },
   {
-    gambar: "img/gambar3.jpg",
+    images: "img/gambar3.jpg",
     nama: "Blueberry",
     warna: "Blue",
     namaLatin: "Vaccinium",
     tipeBiji: "Single Seed",
   },
   {
-    gambar: "./img/gambar4.png",
+    images: "/img/gambar4.png",
     nama: "Cherry",
     warna: "Red",
     namaLatin: "Prunus Apetala",
     tipeBiji: "Double Seed",
   },
   {
-    gambar: "./img/gambar5.jpg",
+    images: "img/gambar5.jpg",
     nama: "Lemon",
     warna: "Yellow",
     namaLatin: "Citrus Limon",
     tipeBiji: "Single Seed",
   },
   {
-    gambar: "./img/gambar6.jpg",
+    images: "img/gambar6.jpg",
     nama: "Mango",
     warna: "Green",
     namaLatin: "Citrus Reticulata",
     tipeBiji: "Double Seed",
   },
   {
-    gambar: "./img/gambar7.png",
+    images: "img/gambar7.png",
     nama: "Orange",
     warna: "Orange",
     namaLatin: "Malus Sylvestris",
     tipeBiji: "Single Seed",
   },
   {
-    gambar: "./img/gambar8.png",
+    images: "/img/gambar8.png",
     nama: "Pear",
     warna: "Yellow",
     namaLatin: "Pyrus Caucasica",
@@ -125,7 +125,7 @@ for (let i = 0; i <= buah.length; i++) {
     <div class="row">
       <div class="col">
           <div class="card">
-            <img src="${buah[i].gambar}" class="card-img-top" alt="Loading..." />
+            <img src=${buah[i].images} class="card-img-top" alt="Loading..." />
                   <div class="card-body">
                     <p class="card-text fs-1 text-dark text-center" alt="Loading...">${buah[i].nama}</p>
                     <p class="card-text fs-6 fw-light" alt="Loading...">Warna: ${buah[i].warna}</p>
