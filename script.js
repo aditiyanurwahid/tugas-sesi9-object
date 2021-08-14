@@ -59,48 +59,56 @@ console.log("Print by ID:", printByID(1));
 // Soal no 4
 let buah = [
   {
+    gambar: "img/gambar1.png",
     nama: "Apple",
     warna: "Red",
     namaLatin: "Malus Sylvestris",
     tipeBiji: "Single Seed",
   },
   {
+    gambar: "img/gambar2.png",
     nama: "Banana",
     warna: "Yellow",
     namaLatin: "Musa Paradisiaca",
     tipeBiji: "Double Seed",
   },
   {
+    gambar: "img/gambar3.jpg",
     nama: "Blueberry",
     warna: "Blue",
     namaLatin: "Vaccinium",
     tipeBiji: "Single Seed",
   },
   {
+    gambar: "./img/gambar4.png",
     nama: "Cherry",
     warna: "Red",
     namaLatin: "Prunus Apetala",
     tipeBiji: "Double Seed",
   },
   {
+    gambar: "./img/gambar5.jpg",
     nama: "Lemon",
     warna: "Yellow",
     namaLatin: "Citrus Limon",
     tipeBiji: "Single Seed",
   },
   {
+    gambar: "./img/gambar6.jpg",
     nama: "Mango",
     warna: "Green",
     namaLatin: "Citrus Reticulata",
     tipeBiji: "Double Seed",
   },
   {
+    gambar: "./img/gambar7.png",
     nama: "Orange",
     warna: "Orange",
     namaLatin: "Malus Sylvestris",
     tipeBiji: "Single Seed",
   },
   {
+    gambar: "./img/gambar8.png",
     nama: "Pear",
     warna: "Yellow",
     namaLatin: "Pyrus Caucasica",
@@ -109,21 +117,26 @@ let buah = [
 ];
 
 console.table(buah);
-
-// console.log(buah[0]);
-// console.log(buah[1]);
-// console.log(buah[2]);
-// console.log(buah[3]);
-// console.log(buah[4]);
-// console.log(buah[5]);
-// console.log(buah[6]);
-// console.log(buah[7]);
-
-document.getElementById("apel").innerHTML = buah[0];
-document.getElementById("banana").innerHTML = buah[1];
-document.getElementById("blueberry").innerHTML = buah[2];
-document.getElementById("cherry").innerHTML = buah[3];
-document.getElementById("lemon").innerHTML = buah[4];
-document.getElementById("mango").innerHTML = buah[5];
-document.getElementById("orange").innerHTML = buah[6];
-document.getElementById("pear").innerHTML = buah[7];
+let daftarBuah = document.getElementById("daftar-buah");
+for (let i = 0; i <= buah.length; i++) {
+  daftarBuah.innerHTML += `
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <div class="card">
+            <img src="${buah[i].gambar}" class="card-img-top" alt="Loading..." />
+                  <div class="card-body">
+                    <p class="card-text fs-1 text-dark text-center" alt="Loading...">${buah[i].nama}</p>
+                    <p class="card-text fs-6 fw-light" alt="Loading...">Warna: ${buah[i].warna}</p>
+                    <p class="card-text fs-6 fw-light" alt="Loading...">Nama Latin: ${buah[i].namaLatin}</p>
+                    <p class="card-text fs-6 fw-light" alt="Loading...">Tipe Biji: ${buah[i].tipeBiji}</p>
+                    
+                  </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
